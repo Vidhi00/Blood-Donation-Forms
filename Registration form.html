@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Registration Form</title> 
+<link rel="stylesheet" type="text/css" href="Registration form.css">
+<script src="angular.min.js"></script>
+<script type="text/javascript">
+        function v1() 
+        {
+            var x=document.getElementById('x1').value;
+            if (x=="") {
+                document.getElementById('a1').innerHTML="&nbsp;&nbsp;*Required";
+                document.getElementById('a1').style.color="red";
+            } 
+            else
+            {
+                document.getElementById('a1').innerHTML="";
+            }
+		}
+        function v2() 
+        {
+            var x=document.getElementById('x2').value;
+            if (x=="") {
+                document.getElementById('a2').innerHTML="&nbsp;&nbsp;*Required";
+                document.getElementById('a2').style.color="red";
+            } 
+            else
+            {
+                document.getElementById('a2').innerHTML="";
+            }
+        }
+        function v3() 
+        {
+            var x=document.getElementById('x3').value;
+            if (x=="") {
+                document.getElementById('a3').innerHTML="&nbsp;&nbsp;*Required";
+                document.getElementById('a3').style.color="red";
+            }
+            else
+            {
+                document.getElementById('a3').innerHTML="";
+            } 
+        }
+        function v4() 
+        {
+            var x=document.getElementById('x4').value;
+            if (x=="") {
+                document.getElementById('a4').innerHTML="&nbsp;&nbsp;*Required or Not Valid";
+                document.getElementById('a4').style.color="red";
+            } 
+        
+                else
+            {
+                document.getElementById('a4').innerHTML=""; 
+        }
+    }
+        function v5() 
+        {
+            var x=document.getElementById('x5').value;
+            if (x.length<8) {
+                document.getElementById('a5').innerHTML="&nbsp;&nbsp;*Weak";
+                document.getElementById('a5').style.color="red";
+            } 
+            else if (x=="") {
+                document.getElementById('a5').innerHTML="&nbsp;&nbsp;*Required or Not Valid";
+                document.getElementById('a5').style.color="red";
+            } 
+                else
+            {
+                document.getElementById('a5').innerHTML=""; 
+        }
+    }
+        function v6() 
+        {
+            var x=document.getElementById('x6').value;
+            if (x.length!=10) {
+                document.getElementById('a6').innerHTML="&nbsp;&nbsp;*Enter a 10 digit number";
+                document.getElementById('a6').style.color="red";
+            } 
+            else if(isNaN(x)) {
+                document.getElementById('a6').innerHTML="&nbsp;&nbsp;*Enter a valid number";
+                document.getElementById('a6').style.color="red";
+            }
+            else if (x=="") {
+                document.getElementById('a6').innerHTML="&nbsp;&nbsp;*Required or Not Valid";
+                document.getElementById('a6').style.color="red";
+            } 
+            else
+            {
+                document.getElementById('a6').innerHTML=""; 
+        }
+    }
+        function v7() 
+        {
+            var x=document.getElementById('x7').value;
+            if (x=="") {
+                document.getElementById('a7').innerHTML="&nbsp;&nbsp;*Required or Not Valid";
+                document.getElementById('a7').style.color="red";
+            } 
+            else if (x<0 || x>10) {
+                document.getElementById('a7').innerHTML="&nbsp;&nbsp;*Invalid CGPA";
+                document.getElementById('a7').style.color="red";
+            } 
+        
+                else
+            {
+                document.getElementById('a7').innerHTML=""; 
+        }
+    }
+    function v8() 
+        {
+            var x=document.getElementById('x8').value;
+            if (x.length<12) {
+                document.getElementById('a8').innerHTML="&nbsp;&nbsp;*Invalid Enrollment number";
+                document.getElementById('a8').style.color="red";
+            } 
+        
+                else
+            {
+                document.getElementById('a8').innerHTML=""; 
+        }
+    }
+    function v9() 
+        {
+            var x=document.getElementById('x9').value;
+            if (x=="") {
+                document.getElementById('a9').innerHTML="&nbsp;&nbsp;*Required";
+                document.getElementById('a9').style.color="red";
+            } 
+            else if(x>0 && x<8)
+            {
+                document.getElementById('a9').innerHTML="&nbsp;&nbsp;*Cannot donate blood below 8 yrs";
+                document.getElementById('a9').style.color="red";
+            }
+            else if(x<0 || x>80)
+            {
+                document.getElementById('a9').innerHTML="&nbsp;&nbsp;*Enter a valid age";
+                document.getElementById('a9').style.color="red";
+            }
+        }
+    function v10() 
+        {
+            var x=document.getElementById('x10').value;
+            if (x=="") {
+                document.getElementById('a10').innerHTML="&nbsp;&nbsp;*Required";
+                document.getElementById('a10').style.color="red";
+            } 
+            else
+            {
+                document.getElementById('a10').innerHTML="";
+            }
+		}
+    function v11() 
+        {
+            var x=document.getElementById('x11').value;
+            if (x=="") {
+                document.getElementById('a11').innerHTML="&nbsp;&nbsp;*Required";
+                document.getElementById('a11').style.color="red";
+            } 
+            else
+            {
+                document.getElementById('a11').innerHTML="";
+            }
+        }
+        
+    </script>
+</head>  
+</head>
+<body ng-controller="ExampleController" ng-app="rangeExample" >
+
+    <h1 align="center"> Blood Donation </h1> 
+<h2 align="center"> Donor Registration Form</h2>
+    <font size="4">
+    <table>
+    <tr> 
+    <th width="50%"> First name:</th>
+    <td width="50%"> <input id="x1" placeholder="Enter your first name" type="text" onblur="v1()" size=60 required /> <span id="a1"></span> </td>    
+    </tr>
+    <tr>
+    <th width="50%"> Second name:</th>
+    <td width="50%"> <input id="x2" placeholder="Enter your second name" type="text" onblur="v2()" size=60/> <span id="a2"></span> </td>    
+    </tr> </td>    
+    </tr>
+    <tr>
+    <th width="50%"> Username:</th>
+    <td width="50%"> <input id="x3" placeholder="Enter your username" type="text" onblur="v3()" size=60/><span id="a3"></span>  </td>    
+    </tr>
+    <tr>
+    <th width="50%"> Password:</th>
+    <td width="50%"> <input id="x5" placeholder="Enter your password" type="password" onblur="v5()" size=60/><span id="a5"></span>   </td>    
+    </tr>
+    <tr>
+    <th width="50%"> Confirm Password:</th>
+    <td width="50%"> <input id="x5" placeholder="Enter your password" type="password" onblur="v5()" size=60/><span id="a5"></span>   </td>    
+    </tr>
+    <tr>
+    <th width="50%"> Gender:</th>
+    <td width="50%"> <input type="radio" size=60 name="gen"/> Male
+                     <input type="radio" size=60 name="gen"/> Female
+    </td>    
+    </tr>
+    <tr>
+    <th width="50%"> Blood Group:</th>
+    <td width="50%">
+    <select>
+        <option> A+ </option>    
+        <option> O+ </option> 
+        <option> B+ </option> 
+        <option> AB+ </option> 
+        <option> A- </option>
+        <option> O- </option> 
+        <option> B- </option> 
+        <option> AB- </option> 
+    </select>    
+    </td>    
+    </tr>
+    <tr>
+    <th width="50%"> Email:</th>
+    <td width="50%"> <input id="x4" placeholder="Enter your email" type="text" onblur="v4()" size=60/> <span id="a4"></span> </td>    
+    </tr>
+        <tr>
+    <th width="50%"> Mobile number:</th>
+    <td width="50%"> <input id="x6" placeholder="Enter your mobile number" type="text" onblur="v6()" size=60/><span id="a6"></span> </td>    
+    </tr>
+        <tr>
+    <th width="50%"> Address 1 (Temporary):</th>
+    <td width="50%"> <textarea id="x7" rows=4 type="text" onblur="v7()" size=60></textarea><span id="a7"></span> </td>    
+    </tr>
+    <tr>
+    <th width="50%"> Address 2 (Permanent):</th>
+    <td width="50%"> <textarea id="x8" rows=4 type="text" onblur="v8()" size=60> </textarea> <span id="a8"></span> </td>    
+    </tr>    
+    <tr>
+    <th width="50%"> Date of last blood donation:</th>
+    <td width="50%"> <input placeholder="Enter date" type="Date" size=60/> </td>    
+    </tr>
+    <tr>
+    <th width="50%"> Age:</th>
+    <td width="50%"> <input id="x9" placeholder="Enter your age" type="number" onblur="v9()" size=60/><span id="a9"></span> </td>    
+    </tr>    
+    <tr>
+    <th width="50%"> Any blood infections and diseases:</th>
+    <td width="50%"> <input id="x10" placeholder="Enter the details" type="text" onblur="v10()" size=60/><span id="a10"></span> </td>    
+    </tr>    
+     <tr>
+    <th width="50%"> Any other infections and diseases:</th>
+    <td width="50%"> <input id="x11" placeholder="Enter the details" type="text" onblur="v11()" size=60/><span id="a11"></span> </td>    
+    </tr>   
+    <tr>
+    <th width="50%"> Number of blood donations made: </th>
+    <td width="25%"> 0<input id="slider" type ="range" min ="{{min}}" max="{{max}}" step ="1" ng-model="val"/> 20 or more</td> 
+    <td width="25%"> <b> {{val}} times </b></td>
+    </tr>  
+    <tr>
+    <th width="50%"> <button type="button">Submit</button> </th>
+    <td width="50%"> <button type="button">Cancel</button>
+    </tr>
+    </table>
+    </font>
+        <script>
+  angular.module('rangeExample', [])
+    .controller('ExampleController', ['$scope', function($scope) {
+      $scope.value = 0;
+      $scope.min = 0;
+      $scope.max = 20;
+    }]);
+</script>
+
+</body>
+</html>
